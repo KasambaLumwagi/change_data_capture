@@ -74,3 +74,24 @@ To get started with the project, follow these steps:
 
    ```bash
    docker-compose up -d
+   ```
+
+   after youre done :
+   ```bash
+   docker-compose down
+   ```
+## Accessing Services
+
+- **Kafka Control Center**: Once the services are running, access the Kafka Control Center at [http://localhost:9021](http://localhost:9021) to monitor Kafka topics and brokers.
+  
+- **Debezium UI**: Use [http://localhost:8070](http://localhost:8070) to access the Debezium UI and manage Debezium connectors.
+
+- **PostgreSQL Database**: The PostgreSQL database is available at `localhost:5432`. You can connect to it using any PostgreSQL client with the credentials provided in the environment configuration.
+
+## Best Practices
+
+- **Data Security**: Ensure that sensitive data is encrypted both in transit and at rest. Use secure methods to manage credentials and access control.
+  
+- **Monitoring**: Regularly monitor the Kafka and Debezium connectors to ensure that data is being captured and streamed correctly.
+  
+- **Resource Management**: Adjust resource allocation (CPU, memory) for Docker containers based on the data volume and processing requirements.
