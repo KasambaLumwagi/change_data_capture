@@ -44,3 +44,33 @@ To set up the project, ensure that you have Docker and Docker Compose installed 
    ```bash
    git clone <repository_url>
    cd <project_directory>
+
+## Docker Setup
+
+2.The project uses Docker Compose to set up and run all the services. The services include:
+
+- Zookeeper
+- Kafka
+- Kafka Control Center
+- Debezium
+- Debezium UI
+- PostgreSQL
+
+The `docker-compose.yml` file is pre-configured to run all these services in Docker containers.
+
+## Environment Variables
+
+Ensure that the necessary environment variables are set. These variables include configuration settings for Kafka, Debezium, and PostgreSQL. The variables are defined in the `docker-compose.yml` file.
+
+## Service Health Checks
+
+The Docker Compose setup includes health checks for each service, ensuring that all services are running correctly before other dependent services start.
+
+## Steps to Run the Project
+
+To get started with the project, follow these steps:
+
+1. **Start the Services**: Use Docker Compose to start all the services.
+
+   ```bash
+   docker-compose up -d
